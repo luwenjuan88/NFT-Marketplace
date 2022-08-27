@@ -78,23 +78,23 @@ async function buyNFT(tokenId) {
                 <img src={data.image} alt="" className="w-2/5" />
                 <div className="text-xl ml-20 space-y-8 text-white shadow-2xl rounded-lg border-2 p-5">
                     <div>
-                        Name: {data.name}
+                        名字: {data.name}
                     </div>
                     <div>
-                        Description: {data.description}
+                        简介: {data.description}
                     </div>
                     <div>
-                        Price: <span className="">{data.price + " ETH"}</span>
+                        价格: <span className="">{data.price + " ETH"}</span>
                     </div>
                     <div>
-                        Owner: <span className="text-sm">{data.owner}</span>
+                        归属: <span className="text-sm">{data.owner}</span>
                     </div>
                     <div>
-                        Seller: <span className="text-sm">{data.seller}</span>
+                        卖方: <span className="text-sm">{data.seller}</span>
                     </div>
                     <div>
                     { currAddress == data.owner || currAddress == data.seller ?
-                        <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>Buy this NFT</button>
+                        <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={() => buyNFT(tokenId)}>购买NFT</button>
                         : <div className="text-emerald-700">You are the owner of this NFT</div>
                     }
                     

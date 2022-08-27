@@ -27,7 +27,7 @@ async function getAddress() {
 
 function updateButton() {
   const ethereumButton = document.querySelector('.enableEthereumButton');
-  ethereumButton.textContent = "Connected";
+  ethereumButton.textContent = "已连接";
   ethereumButton.classList.remove("hover:bg-blue-70");
   ethereumButton.classList.remove("bg-blue-500");
   ethereumButton.classList.add("hover:bg-green-70");
@@ -75,7 +75,7 @@ async function connectWebsite() {
           <ul className='flex items-end justify-between py-3 bg-transparent text-white pr-5'>
           <li className='flex items-end ml-5 pb-2'>
             <Link to="/">
-            <img src={fullLogo} alt="" width={120} height={120} className="inline-block -mt-2"/>
+            {/* <img src={fullLogo} alt="" width={120} height={120} className="inline-block -mt-2"/> */}
             <div className='inline-block font-bold text-xl ml-2'>
               NFT Marketplace
             </div>
@@ -85,33 +85,33 @@ async function connectWebsite() {
             <ul className='lg:flex justify-between font-bold mr-10 text-lg'>
               {location.pathname === "/" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/">市场</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/">市场</Link>
               </li>              
               }
               {location.pathname === "/sellNFT" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/sellNFT">List My NFT</Link>
+                <Link to="/sellNFT">铸造</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/sellNFT">List My NFT</Link>
+                <Link to="/sellNFT">铸造</Link>
               </li>              
               }              
               {location.pathname === "/profile" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/profile">Profile</Link>
+                <Link to="/profile">我的</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/profile">Profile</Link>
+                <Link to="/profile">我的</Link>
               </li>              
               }  
               <li>
-                <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={connectWebsite}>{connected? "Connected":"Connect Wallet"}</button>
+                <button className="enableEthereumButton bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-sm" onClick={connectWebsite}>{connected? "已连接":"连接钱包"}</button>
               </li>
             </ul>
           </li>
