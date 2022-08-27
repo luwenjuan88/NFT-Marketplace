@@ -11,6 +11,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   }
 });
 
+const ALCHEMY_API_URL = process.env.REACT_APP_ALCHEMY_API_URL;
+const PRIVATE_KEY = process.env.REACT_APP_PRIVATE_KEY;
+
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
@@ -26,8 +29,8 @@ module.exports = {
       //accounts: [process.env.privateKey]
     },
     goerli: {
-      url: process.env.REACT_APP_ALCHEMY_API_URL,
-      accounts: [ process.env.REACT_APP_PRIVATE_KEY ]
+      url: ALCHEMY_API_URL,
+      accounts: [`0x${PRIVATE_KEY}`]
     }
   },
   solidity: {
