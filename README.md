@@ -1,11 +1,4 @@
-# Basic NFT Marketplace end to end
 
-This code is for the Tutorial [Build your own NFT Marketplace from Scratch](https://docs.alchemy.com/alchemy/) built by [alchemy.com](https://alchemy.com)
+前端部署到vercel上了：https://nft-marketplace-bay-ten.vercel.app/
 
-To set up the repository and run the marketplace locally, run the below
-```bash
-git clone https://github.com/OMGWINNING/NFT-Marketplace-Tutorial
-cd NFT-Marketplace-Tutorial
-npm install
-npm start
-```
+由于没有后台，所以只能浏览，铸造就不行，.env文件的账号没有上传，只能在我本地使用
